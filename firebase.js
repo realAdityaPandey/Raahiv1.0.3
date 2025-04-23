@@ -6,14 +6,14 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA8PyYrGfsODSEYqhbeBP-CJE7UxEy83TE",
-  authDomain: "raahi-2b943.firebaseapp.com",
-  databaseURL: "https://raahi-2b943-default-rtdb.firebaseio.com",
-  projectId: "raahi-2b943",
-  storageBucket: "raahi-2b943.firebasestorage.app",
-  messagingSenderId: "1058938218048",
-  appId: "1:1058938218048:web:c3682e8bab8217b28561a5",
-  measurementId: "G-LLVG1RN4V0"
+  apiKey: "AIzaSyARZd19U_FQLFkViWVDS-IYy0hFQXvWwqc",
+  authDomain: "raahi-278a1.firebaseapp.com",
+  databaseURL: "https://raahi-278a1-default-rtdb.firebaseio.com",
+  projectId: "raahi-278a1",
+  storageBucket: "raahi-278a1.firebasestorage.app",
+  messagingSenderId: "842027006581",
+  appId: "1:842027006581:web:16cc8736560ec1ff86963c",
+  measurementId: "G-KBQH2CLXZQ"
 };
 
 

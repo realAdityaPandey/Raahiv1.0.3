@@ -2,25 +2,15 @@
   "rules": {
     "users": {
       "$uid": {
-        ".read": "$uid === auth.uid",
-        ".write": "$uid === auth.uid"
+        // ONLY the logged-in user can read/write their own data
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
       }
     },
-    "rides": {
-      ".read": "auth != null",
-      ".write": "auth != null",
-      ".indexOn": ["driverId", "status"],
-      "$rideId": {
-        ".write": "auth != null && (!data.exists() || data.child('driverId').val() === auth.uid)"
-      }
-    },
-    "bookings": {
-      ".read": "auth != null",
-      ".write": "auth != null",
-      ".indexOn": ["passengerId", "rideId", "status"],
-      "$bookingId": {
-        ".write": "auth != null && (!data.exists() || data.child('passengerId').val() === auth.uid || root.child('rides').child(data.child('rideId').val()).child('driverId').val() === auth.uid)"
-      }
+    // Optional: Publicly readable data (adjust as needed)
+    "publicData": {
+      ".read": true,
+      ".write": "auth != null"
     }
   }
 }
